@@ -28,10 +28,28 @@ const assertEqualArrays = function(actual, expected) {
 
 //console.log(assertEqualArrays(["uwu"], ["owo"]));
 
-const letterPositions = function() {
-  const results = [];
+const letterPositions = function(string) {
 
-  
+  let letterIndexObject = {};
 
-  return results;
-}
+  for (let i = 0; i < string.length; i++) {
+
+    if (string[i] !== " ") {
+      if (letterIndexObject[string[i]]) {
+
+        letterIndexObject[string[i]].push(i);
+
+      } else {
+
+        letterIndexObject[string[i]] = [i];
+
+      }
+    }
+  }
+
+  return letterIndexObject;
+};
+let str = letterPositions("hello");
+console.log(str);
+console.log(assertEqualArrays(str, [2,3]));
+console.log(assertEqualArrays(letterPositions("hello").e, [1]));
