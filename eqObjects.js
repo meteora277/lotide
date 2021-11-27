@@ -1,16 +1,13 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
   } else {
     return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
   }
 };
-const eqArrays = function(array1, array2) {
-
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
-
     return false;
-
   }
 
   for (let i = 0; i < array1.length; i++) {
@@ -21,8 +18,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const eqObjects = function(object1, object2) {
-
+const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
@@ -32,6 +28,10 @@ const eqObjects = function(object1, object2) {
       if (eqArrays(object1[key], object2[key]) === false) {
         return false;
       }
+    } else if (object1[key] instanceof Object) {
+
+      return eqObjects(object1[key], object2[key]);
+
     } else if (object1[key] !== object2[key]) {
       return false;
     }
@@ -53,7 +53,7 @@ const eqObjects = function(object1, object2) {
 // const cd2 = { c: "1", d: ["2", 3, 4] };
 // console.log(eqObjects(cd, cd2)); // => false
 
-let uwu = {u: {w: "u"}};
-let owo = {u: {w: "u"}};
-
-console.log(assertEqual(eqObjects(uwu,owo),true));
+let uwu = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
+let owo = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
+console.log(eqObjects(uwu, owo));
+console.log(assertEqual(eqObjects(uwu, owo), true));
