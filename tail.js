@@ -1,6 +1,6 @@
 const tail = function(arr) {
 
-  let newArr = arr.slice(1);
+  let newArr = arr.slice(1, arr.length);
 
   return newArr;
 
