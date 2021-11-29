@@ -50,3 +50,5 @@ assertEqual(findKey({
   "owo" : "hewwo",
   "birb": "henlo"
 }, x => x === "hewwo"), "owo");
+
+module.exports = findKey;

@@ -57,3 +57,5 @@ let uwu = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
 let owo = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
 console.log(eqObjects(uwu, owo));
 console.log(assertEqual(eqObjects(uwu, owo), true));
+
+module.exports = eqObjects;

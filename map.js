@@ -34,3 +34,5 @@ assertEqualArrays(
 assertEqualArrays(
   map(words, (word) => word.split("").map(letter => letter === "r" ? "ow" : letter).join("")),["gowound", "contowol", "to", "majoow", "tom"]
 );
+
+module.exports = map;

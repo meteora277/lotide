@@ -47,6 +47,8 @@ const firstNames = [
   "Joe"
 ];
 
+module.exports = countOnly;
+
 const result1 = countOnly(firstNames, {"Jason" : true, "Karima": true, "Fang": true, "Agouhanna": false});
 
 console.log(assertEqual(result1["Jason"], 1));
