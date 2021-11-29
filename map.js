@@ -15,7 +15,6 @@ const assertEqualArrays = function(actual, expected) {
   }
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
 
 const map = function(array, callback) {
   let results = [];
@@ -25,14 +24,16 @@ const map = function(array, callback) {
   return results;
 };
 
-assertEqualArrays(
-  map(words, (word) => word[0]),["g", "c", "t", "m", "t"]
-);
-assertEqualArrays(
-  map(words, (word) => word + " uwu"),["ground uwu", "control uwu", "to uwu", "major uwu", "tom uwu"]
-);
-assertEqualArrays(
-  map(words, (word) => word.split("").map(letter => letter === "r" ? "ow" : letter).join("")),["gowound", "contowol", "to", "majoow", "tom"]
-);
+// const words = ["ground", "control", "to", "major", "tom"];
+
+// assertEqualArrays(
+//   map(words, (word) => word[0]),["g", "c", "t", "m", "t"]
+// );
+// assertEqualArrays(
+//   map(words, (word) => word + " uwu"),["ground uwu", "control uwu", "to uwu", "major uwu", "tom uwu"]
+// );
+// assertEqualArrays(
+//   map(words, (word) => word.split("").map(letter => letter === "r" ? "ow" : letter).join("")),["gowound", "contowol", "to", "majoow", "tom"]
+// );
 
 module.exports = map;

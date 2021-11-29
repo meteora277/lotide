@@ -50,8 +50,8 @@ const letterPositions = function(string) {
   return letterIndexObject;
 };
 let str = letterPositions("hello");
-console.log(str);
-console.log(assertEqualArrays(str, [2,3]));
-console.log(assertEqualArrays(letterPositions("hello").e, [1]));
+// console.log(str);
+// console.log(assertEqualArrays(str, [2,3]));
+// console.log(assertEqualArrays(letterPositions("hello").e, [1]));
 
 module.exports = letterPositions;

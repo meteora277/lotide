@@ -53,9 +53,9 @@ const eqObjects = function(object1, object2) {
 // const cd2 = { c: "1", d: ["2", 3, 4] };
 // console.log(eqObjects(cd, cd2)); // => false
 
-let uwu = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
-let owo = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
-console.log(eqObjects(uwu, owo));
-console.log(assertEqual(eqObjects(uwu, owo), true));
+// let uwu = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
+// let owo = { u: { w: "u" }, o: "w", uwu: {w: "hats", t:"his"}};
+// console.log(eqObjects(uwu, owo));
+// console.log(assertEqual(eqObjects(uwu, owo), true));
 
 module.exports = eqObjects;
