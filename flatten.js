@@ -43,7 +43,7 @@ const flatten = function(array) {
   return unnestedArray;
 };
 
-console.log(flatten([1, 2, [3, 4, 6, 8], 5, [6]]));
+// console.log(flatten([1, 2, [3, 4, 6, 8], 5, [6]]));
 
 module.exports = flatten;
 

@@ -18,6 +18,6 @@ const reverse = function(args) {
   return reversedArray;
 };
 
-console.log(reverse(args));
+// console.log(reverse(args));
 
 module.exports = reverse;
